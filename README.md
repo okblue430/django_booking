@@ -1,7 +1,7 @@
 # django_booking
 
 Add booking to your INSTALLED_APPS
-
+-----
 INSTALLED_APPS = (
     ...,
     'booking',
@@ -17,12 +17,15 @@ Don't forget to migrate your database
 ./manage.py migrate booking
 
 Usage
+-----
 
 If you allow anonymous bookings, the session object is stored within the booking model. Otherwise it will be connected to the User model.
 
 NOTE: If a session is destroyed, the connected booking model will also be removed.
 
-In order to allow login via email and booking ID, please add this to your AUTHENTICATION_BACKENDS:
+In order to allow login via email and booking ID, please add this to your 
+
+``AUTHENTICATION_BACKENDS``::
 
 AUTHENTICATION_BACKENDS = (
     # your usual auth backends
